@@ -31,7 +31,7 @@ public abstract class Empleado {
     }
 
 
-    public int calcularSalario(int salarioBase) {
+    public int calcularSalario() {
         return salarioBase;
     }
 }
