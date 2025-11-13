@@ -1,10 +1,15 @@
 package com.example.empresaseguridad.model;
 
+import java.util.ArrayList;
+
 public class Operador extends Empleado{
     public int zonasControl;
     public Boolean trabajaCentral;
     public Boolean manejaSeguridad;
     public Turno turno;
+
+    ArrayList<Equipo> listEquipo;
+    MonitoreoRemoto theMonitoreoRemoto;
 
 
     public Operador(String id, String nombre, int salarioBase, int zonasControl, Boolean trabajaCentral, Boolean manejaSeguridad, Turno turno) {

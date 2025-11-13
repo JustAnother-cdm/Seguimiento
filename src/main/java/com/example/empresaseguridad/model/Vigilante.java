@@ -1,9 +1,14 @@
 package com.example.empresaseguridad.model;
 
+import java.util.ArrayList;
+
 public class Vigilante extends Empleado {
     public String puesto;
     public String tipoArma;
     public Turno turno;
+
+    ArrayList<Equipo> listEquipo;
+    CustodiaFija theCustodiaFija;
 
 
 

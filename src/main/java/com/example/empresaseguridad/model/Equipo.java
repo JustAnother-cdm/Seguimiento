@@ -8,6 +8,10 @@ public class Equipo {
         public int coste;
         public int cantidad;
 
+        Supervisor theSupervisor;
+        Vigilante theVigilante;
+        Operador theOperador;
+
 
     public Equipo (String cod, String tipo, String estado,int valorRep, int coste,int cantidad){
         this.cod = cod;

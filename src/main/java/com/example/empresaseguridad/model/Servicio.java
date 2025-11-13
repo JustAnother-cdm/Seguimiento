@@ -33,4 +33,8 @@ public abstract class Servicio {
     public void setTarifa(int tarifa) {
         this.tarifa = tarifa;
     }
+
+    public int costoMensual(){
+        return tarifa;
+    }
 }

@@ -1,9 +1,13 @@
 package com.example.empresaseguridad.model;
 
+import java.util.ArrayList;
+
 public class Supervisor extends Empleado {
     public String conjuntoAsignado;
     public int bono;
     public Turno turno;
+
+    ArrayList<Equipo> listEquipo;
 
 
 
