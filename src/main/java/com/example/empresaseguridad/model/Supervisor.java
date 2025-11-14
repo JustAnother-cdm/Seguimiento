@@ -7,7 +7,7 @@ public class Supervisor extends Empleado {
     public int bono;
     public Turno turno;
 
-    public ArrayList<Equipo> listEquipo;
+    public ArrayList<Equipo> listEquipo  = new ArrayList<>();
 
 
 
