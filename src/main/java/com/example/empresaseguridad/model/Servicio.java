@@ -10,6 +10,7 @@ public abstract class Servicio {
         this.tarifa = tarifa;
     }
 
+
     public String getCodigoContrato() {
         return codigoContrato;
     }
