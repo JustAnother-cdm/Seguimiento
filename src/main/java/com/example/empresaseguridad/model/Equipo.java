@@ -12,11 +12,13 @@ public class Equipo {
         public Vigilante theVigilante;
         public Operador theOperador;
 
-
-    public Equipo (String cod, String tipo, String estado,int valorRep, int coste,int cantidad){
+    public Equipo(String cod, String tipo, String estado, int valorRep, int coste, int cantidad) {
         this.cod = cod;
         this.tipo = tipo;
         this.estado = estado;
+        this.valorRep = valorRep;
+        this.coste = coste;
+        this.cantidad = cantidad;
     }
 
     public String getCod() {
