@@ -110,4 +110,4 @@ public class SEGURCOL {
         monitoreoRemotos.removeIf(m -> m.getCodigoContrato().equals(id));
     }
 
-    public ArrayList<MonitoreoRemoto> getMonitoreoRemotos() { return monitoreoRemotos; }
+    public ArrayList<MonitoreoRemoto> getMonitoreoRemotos() { return monitoreoRemotos; }}
