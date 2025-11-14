@@ -61,6 +61,7 @@ public class SEGURCOL {
         System.out.println("Eliminando vigilante: " + nombre);
     }
 
+
     public void agregarSupervisor (Supervisor m) {
         supervisors.add(m);
         System.out.println("Agregando supervisor: " + m.getNombre());
