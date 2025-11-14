@@ -1,100 +1,113 @@
 package com.example.empresaseguridad.model;
 
-
 import java.util.ArrayList;
 
 public class SEGURCOL {
+
     private String nit;
-    public ArrayList<Equipo> equipos;
-    public ArrayList<Operador> operadores;
-    public ArrayList<Supervisor>  supervisors;
-    public ArrayList<Vigilante>  vigilantes;
-    public ArrayList<PatrujalleMovil>  patrullajeMovil;
-    public ArrayList<CustodiaFija> custodiaFijas;
-    public ArrayList<MonitoreoRemoto>  monitoreoRemotos;
+
+    private ArrayList<Equipo> equipos;
+    private ArrayList<Operador> operadores;
+    private ArrayList<Supervisor> supervisors;
+    private ArrayList<Vigilante> vigilantes;
+    private ArrayList<PatrujalleMovil> patrullajeMovil;
+    private ArrayList<CustodiaFija> custodiaFijas;
+    private ArrayList<MonitoreoRemoto> monitoreoRemotos;
 
     public SEGURCOL(String nit) {
         this.nit = nit;
-        this.equipos  = new ArrayList<>();
-        this.operadores  = new ArrayList<>();
-        this.supervisors  = new ArrayList<>();
-        this.vigilantes  = new ArrayList<>();
-        this.patrullajeMovil  = new ArrayList<>();
-        this.custodiaFijas  = new ArrayList<>();
-        this.monitoreoRemotos  = new ArrayList<>();
+
+        equipos = new ArrayList<>();
+        operadores = new ArrayList<>();
+        supervisors = new ArrayList<>();
+        vigilantes = new ArrayList<>();
+        patrullajeMovil = new ArrayList<>();
+        custodiaFijas = new ArrayList<>();
+        monitoreoRemotos = new ArrayList<>();
     }
 
-    public String getNit() {
-        return nit;
+    public String getNit() { return nit; }
+    public void setNit(String nit) { this.nit = nit; }
+
+    // ------------------- CRUD EQUIPOS -------------------
+    public void agregarEquipo(Equipo e) {
+        equipos.add(e);
     }
 
-    public void setNit(String nit) {
-        this.nit = nit;
+    public void eliminarEquipo(String id) {
+        equipos.removeIf(e -> e.getCod().equals(id));
     }
 
-    //Crud Equipos
-    public void agregarEquipo(Equipo m) {
-        equipos.add(m);
-        System.out.println("Agregando equipo: " + m.getCod());
-    }
-    public void eliminarEquipo(String Cod) {
-        equipos.removeIf(p -> p.getCod().equals(Cod));
-        System.out.println("Eliminando equipo: " + Cod);
-    }
-
-    //CRUD operador
-    public void agregarOperadores (Operador m) {
-        operadores.add(m);
-        System.out.println("Agregando operador: " + m.getNombre());
-    }
-    public void eliminarOperadores(String nombre) {
-        operadores.removeIf(m -> m.getNombre().equals(nombre));
-        System.out.println("Eliminando operador: " + nombre);
-    }
-
-    public void agregarVigilante (Vigilante m) {
-        vigilantes.add(m);
-        System.out.println("Agregando vigilante: " + m.getNombre());
-    }
-    public void eliminarVigilante(String nombre) {
-        vigilantes.removeIf(m -> m.getNombre().equals(nombre));
-        System.out.println("Eliminando vigilante: " + nombre);
-    }
+    public ArrayList<Equipo> getEquipos() { return equipos; }
 
 
-    public void agregarSupervisor (Supervisor m) {
-        supervisors.add(m);
-        System.out.println("Agregando supervisor: " + m.getNombre());
-    }
-    public void eliminarSupervisor(String nombre) {
-        supervisors.removeIf(m -> m.getNombre().equals(nombre));
-        System.out.println("Eliminando supervisor: " + nombre);
+    // ------------------- CRUD OPERADORES -------------------
+    public void agregarOperador(Operador o) {
+        operadores.add(o);
     }
 
-    public void agregarMonitoreoRemoto (MonitoreoRemoto m) {
+    public void eliminarOperador(String id) {
+        operadores.removeIf(o -> o.getId().equals(id));
+    }
+
+    public ArrayList<Operador> getOperadores() { return operadores; }
+
+
+    // ------------------- CRUD VIGILANTES -------------------
+    public void agregarVigilante(Vigilante v) {
+        vigilantes.add(v);
+    }
+
+    public void eliminarVigilante(String id) {
+        vigilantes.removeIf(v -> v.getId().equals(id));
+    }
+
+    public ArrayList<Vigilante> getVigilantes() { return vigilantes; }
+
+
+    // ------------------- CRUD SUPERVISORES -------------------
+    public void agregarSupervisor(Supervisor s) {
+        supervisors.add(s);
+    }
+
+    public void eliminarSupervisor(String id) {
+        supervisors.removeIf(s -> s.getId().equals(id));
+    }
+
+    public ArrayList<Supervisor> getSupervisores() { return supervisors; }
+
+
+    // ------------------- CRUD PATRULLAJE -------------------
+    public void agregarPatrullaje(PatrujalleMovil p) {
+        patrullajeMovil.add(p);
+    }
+
+    public void eliminarPatrullaje(String id) {
+        patrullajeMovil.removeIf(p -> p.getCodigoContrato().equals(id));
+    }
+
+    public ArrayList<PatrujalleMovil> getPatrullajeMovil() { return patrullajeMovil; }
+
+
+    // ------------------- CRUD CUSTODIA -------------------
+    public void agregarCustodiaFija(CustodiaFija c) {
+        custodiaFijas.add(c);
+    }
+
+    public void eliminarCustodiaFija(String id) {
+        custodiaFijas.removeIf(c -> c.getCodigoContrato().equals(id));
+    }
+
+    public ArrayList<CustodiaFija> getCustodiaFijas() { return custodiaFijas; }
+
+
+    // ------------------- CRUD MONITOREO -------------------
+    public void agregarMonitoreo(MonitoreoRemoto m) {
         monitoreoRemotos.add(m);
-        System.out.println("Agregando monitoreo: " + m.getCodigoContrato());
-    }
-    public void eliminarMonitoreoRemotos(String nombre) {
-        monitoreoRemotos.removeIf(m -> m.getCodigoContrato().equals(nombre));
-        System.out.println("Eliminando monitoreo: " + nombre);
     }
 
-    public void agregarPatrullaje (PatrujalleMovil m) {
-        patrullajeMovil.add(m);
-        System.out.println("Agregando patrullaje: " + m.getCodigoContrato());
-    }
-    public void eliminarPatrullaje(String nombre) {
-        patrullajeMovil.removeIf(m -> m.getCodigoContrato().equals(nombre));
-        System.out.println("Eliminando --: " + nombre);
+    public void eliminarMonitoreo(String id) {
+        monitoreoRemotos.removeIf(m -> m.getCodigoContrato().equals(id));
     }
 
-    public void agregarCustodiaFijas (CustodiaFija m) {
-        custodiaFijas.add(m);
-        System.out.println("Agregando custodia fija: " + m.getCodigoContrato());
-    }
-    public void eliminarCustodiaFijas(String nombre) {
-        custodiaFijas.removeIf(m -> m.getCodigoContrato().equals(nombre));
-        System.out.println("Eliminando custodia: " + nombre);
-    }
-}
+    public ArrayList<MonitoreoRemoto> getMonitoreoRemotos() { return monitoreoRemotos; }
