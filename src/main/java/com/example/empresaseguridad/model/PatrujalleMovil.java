@@ -30,6 +30,14 @@ public class PatrujalleMovil extends Servicio{
         this.rutas = rutas;
     }
 
+    public void asignarEquipo(Equipo e) {
+        listEquipo.add(e);
+    }
+
+    public ArrayList<Equipo> getEquipos() {
+        return listEquipo;
+    }
+
     @Override
     public int costoMensual() {
         return tarifa + (rutas * kilometros)*1000;
