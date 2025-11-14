@@ -4,7 +4,7 @@ public class MonitoreoRemoto extends Servicio {
     int numDispositivos;
     int camaras;
     int sensores;
-    Operador theOperador;
+    public Operador theOperador;
 
     public MonitoreoRemoto(String codigoContrato, String cliente, int tarifa, int numDispositivos, int camaras, int sensores) {
         super(codigoContrato, cliente, tarifa);

@@ -8,8 +8,8 @@ public class Operador extends Empleado{
     public Boolean manejaSeguridad;
     public Turno turno;
 
-    ArrayList<Equipo> listEquipo;
-    MonitoreoRemoto theMonitoreoRemoto;
+    public ArrayList<Equipo> listEquipo;
+    public MonitoreoRemoto theMonitoreoRemoto;
 
 
     public Operador(String id, String nombre, int salarioBase, int zonasControl, Boolean trabajaCentral, Boolean manejaSeguridad, Turno turno) {

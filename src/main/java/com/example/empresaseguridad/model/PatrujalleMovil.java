@@ -6,7 +6,7 @@ public class PatrujalleMovil extends Servicio{
     public int kilometros;
     public int rutas;
 
-    ArrayList<Equipo> listEquipo;
+    public ArrayList<Equipo> listEquipo;
 
     public PatrujalleMovil(String codigoContrato, String cliente, int tarifa, int kilometros, int rutas) {
         super(codigoContrato, cliente, tarifa);

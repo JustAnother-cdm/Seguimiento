@@ -7,8 +7,8 @@ public class Vigilante extends Empleado {
     public String tipoArma;
     public Turno turno;
 
-    ArrayList<Equipo> listEquipo;
-    CustodiaFija theCustodiaFija;
+    public ArrayList<Equipo> listEquipo;
+    public CustodiaFija theCustodiaFija;
 
 
 
